@@ -22,10 +22,12 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons';
+import { useColorMode} from "@chakra-ui/react"
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
+  const { colorMode, toggleColorMode } = useColorMode()
   return (
     <Box>
       <Flex
@@ -56,7 +58,7 @@ export default function WithSubnavigation() {
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')} href={'/'}>
-            <img height={'30px'} width={'70px'} src={logo} alt="" />
+            <img height={'30px'} width={'120px'} src={logo} alt="" />
             {/* //https://res.cloudinary.com/urbanclap/image/upload/images/growth/home-screen/1631097450980-d2de38.png */}
           </Text>
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -69,6 +71,10 @@ export default function WithSubnavigation() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
+            {/* colorMode theme Toggle  */}
+            <Button onClick={toggleColorMode}>
+        Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+      </Button>
             <Button
             as={'a'}
             fontSize={'m'}
