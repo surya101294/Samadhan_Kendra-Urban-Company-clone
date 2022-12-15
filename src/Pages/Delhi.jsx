@@ -9,10 +9,7 @@ import {
 } from '@chakra-ui/react';
 import Footer, {ListHeader, LargeWithAppLinksAndSocial, SocialButton} from './Footer'
 
-export default function WithBackgroundImage() {
-  const handleOnchangeService=(e)=>{
-    
-  }
+export default function WithBackgroundImage() {  
   return (
     <div>
     <Flex
@@ -55,7 +52,7 @@ export default function WithBackgroundImage() {
               rounded={'full'}
               color={'white'}
               _hover={{ bg: 'whiteAlpha.500' }}
-              onChange={handleOnchangeService}/>
+              />
           </Stack>
         </Stack>
       </VStack>
