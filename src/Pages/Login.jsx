@@ -1,4 +1,4 @@
-import { Center, Heading } from '@chakra-ui/react';
+/*import { Center, Heading } from '@chakra-ui/react';
 import {
   Button,
   FormControl,
@@ -67,4 +67,52 @@ export default function VerifyEmailForm() {
       </Stack>
     </Flex>
   );
+}
+*/
+import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+} from '@chakra-ui/react'
+import { useDisclosure, Button,Input } from '@chakra-ui/react'
+import React from 'react'
+
+export default function Login() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
+
+  return (
+    <>
+      <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
+        Login
+      </Button>
+      <Drawer
+        isOpen={isOpen}
+        placement='right'
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Create your account</DrawerHeader>
+
+          <DrawerBody>
+            <Input placeholder='Type here...' />
+          </DrawerBody>
+
+          <DrawerFooter>
+            <Button variant='outline' mr={3} onClick={onClose}>
+              Cancel
+            </Button>
+            <Button colorScheme='blue'>Save</Button>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
+    </>
+  )
 }

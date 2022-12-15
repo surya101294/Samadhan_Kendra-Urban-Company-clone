@@ -10,11 +10,11 @@ import {
 
 export default function Homemid() {
   return (
-    <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
-      <Flex p={8} flex={1} align={'center'} justify={'center'}>
+    <Stack  direction={{ base: 'column', md: 'row' }}>
+      <Flex p={8} flex={2}  justify={'center'}>
         <Stack spacing={6} w={'full'} maxW={'lg'}>
-          <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
-            <Text
+          <Heading mt={'10'} fontSize={{ base: '3xl', md: '4xl', lg: '4xl' }}>
+            <Text 
               as={'span'}
               position={'relative'}
               _after={{
@@ -24,44 +24,71 @@ export default function Homemid() {
                 position: 'absolute',
                 bottom: 1,
                 left: 0,
-                bg: 'blue.400',
+                // bg: 'blue.400',
                 zIndex: -1,
               }}>
-              Freelance
+               Book professionals from your phone
             </Text>
             <br />{' '}
-            <Text color={'blue.400'} as={'span'}>
-              Design Projects
-            </Text>{' '}
+            <br />
+            {/* <Text color={'white'} as={'span'}>
+             Enter your mobile number to get the App download link. 
+            </Text>{' '} */}
           </Heading>
-          <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
-            Book professionals from your phone
+          {/* <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
+            
           </Text>
           <Text fontSize={{ base: 's', lg: 'lg' }} color={'gray.100'}>
-          Enter your mobile number to get the App download link.
-          </Text>
-
+          
+          </Text> */}
+<Flex gap={'50px'} position={'center'} pl={'10'} >
+<Image ml={'10'} 
+          alt={'Google pay'}
+          // objectFit={'cover'}
+          width={'21'}
+          height={'38'}
+          src={
+            'https://images.urbanclap.com/image/upload/categories/category_v2/category_7f907eb0.png'
+          }
+        />
+         <Image
+          alt={'App store'}
+          // objectFit={'cover'}
+          width={'21'}
+          height={'38'}
+          src={
+            'https://images.urbanclap.com/image/upload/categories/category_v2/category_7f741d10.png'
+          }
+        />
+</Flex>
           <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-            <input type="text" placeholder='select Country' />
-            <Button
+            {/* <input type="text" placeholder='select Country' /> */}
+            {/* <Button
               rounded={'full'}
-              bg={'blue.400'}
+              bg={'white.400'}
               color={'white'}
               _hover={{
-                bg: 'blue.500',
+                bg: 'white.500',
               }}>
               Send
-            </Button>
+            </Button> */}
             {/* <Button rounded={'full'}>How It Works</Button> */}
           </Stack>
         </Stack>
       </Flex>
-      <Flex flex={1}>
+      <Flex flex={3} gap={8} maxH={'500'}> 
         <Image
           alt={'Login Image'}
-          objectFit={'cover'}
+          // objectFit={'cover'}
           src={
             'https://res.cloudinary.com/urbanclap/image/upload/w_300,f_auto/categories/category_v2/category_2d7045d0.png'
+          }
+        />
+         <Image
+          alt={'Login Image'}
+          // objectFit={'cover'}
+          src={
+            'https://res.cloudinary.com/urbanclap/image/upload/w_350,f_auto/categories/category_v2/category_2d013050.png'
           }
         />
       </Flex>
