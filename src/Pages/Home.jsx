@@ -11,13 +11,15 @@ import {
 import Homemid from './Homemid';
 import Footer from './Footer'
 import Delhi from './Delhi'
+
+// import {Link as RouterLink} from 'react-router-dom'
 // import {MdArrowDropDown } from "react/icon"
 
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 export default function SplitScreen() {
   const navigate = useNavigate
   const handleChangeCountry = (e) => {
-    e.target.value ? <RouterLink to={"/delhi-ncr"}></RouterLink> : <RouterLink to={"/"}></RouterLink>
+    <RouterLink to={"/delhi"}></RouterLink> 
 
   }
   return (
@@ -25,6 +27,7 @@ export default function SplitScreen() {
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
         <Flex flex={1}>
           <Image
+          
             alt={'Login Image'}
             objectFit={'cover'}
             src={
@@ -70,13 +73,16 @@ export default function SplitScreen() {
             </Text> */}
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4} position={'center'}>
               {/* <input type="text" position={'center'} placeholder='select your City' /> */}
+             <RouterLink to={"/delhi"}> 
+
               <Select position={'center'} placeholder='Select Country' bg={'white'} variant='filled'
-                onChange={(e) => handleChangeCountry(e)}>
+                >
                 "
                 <option value='option1'>India</option>
                 <option value='option2'>New York</option>
                 <option value='option3'>America</option>
               </Select>
+              </RouterLink>
               {/* <Button
                 rounded={'full'}
                 bg={'blue.400'}

@@ -1,18 +1,21 @@
 import React from 'react'
-import { Route,Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Home from '../Pages/Home'
 import Login from '../Pages/Login'
-import Delhi from "../Pages/Delhi"
-
+import Delhi from '../Pages/Delhi'
+import HairSkin from '../Pages/HairSkin'
+import Payment from '../Pages/Payment'
 
 const AllRoutes = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/login" element={<Login/>}></Route>
-        <Route path="/delhi-ncr" element={<Delhi/>}></Route>
-        <Route path="*" element={<h1>Error 404 , No page Found</h1>}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/delhi" element={<Delhi />} />
+        <Route path="/hair-skin" element={<HairSkin />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="*" element={<h1>Error 404 , No page Found</h1>} />
         {/* <Route path="/" element={<Home/>}></Route> */}
       </Routes>
     </div>
