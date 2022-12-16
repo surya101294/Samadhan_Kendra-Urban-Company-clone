@@ -10,11 +10,11 @@ import {
 
 export default function Homemid() {
   return (
-    <Stack  direction={{ base: 'column', md: 'row' }}>
-      <Flex p={8} flex={2}  justify={'center'}>
+    <Stack direction={{ base: 'column', md: 'row' }}>
+      <Flex p={8} flex={2} justify={'center'}>
         <Stack spacing={6} w={'full'} maxW={'lg'}>
           <Heading mt={'10'} fontSize={{ base: '3xl', md: '4xl', lg: '4xl' }}>
-            <Text 
+            <Text
               as={'span'}
               position={'relative'}
               _after={{
@@ -27,7 +27,7 @@ export default function Homemid() {
                 // bg: 'blue.400',
                 zIndex: -1,
               }}>
-               Book professionals from your phone
+              Book professionals from your phone
             </Text>
             <br />{' '}
             <br />
@@ -41,26 +41,26 @@ export default function Homemid() {
           <Text fontSize={{ base: 's', lg: 'lg' }} color={'gray.100'}>
           
           </Text> */}
-<Flex gap={'50px'} position={'center'} pl={'10'} >
-<Image ml={'10'} 
-          alt={'Google pay'}
-          // objectFit={'cover'}
-          width={'21'}
-          height={'38'}
-          src={
-            'https://images.urbanclap.com/image/upload/categories/category_v2/category_7f907eb0.png'
-          }
-        />
-         <Image
-          alt={'App store'}
-          // objectFit={'cover'}
-          width={'21'}
-          height={'38'}
-          src={
-            'https://images.urbanclap.com/image/upload/categories/category_v2/category_7f741d10.png'
-          }
-        />
-</Flex>
+          <Flex gap={'50px'} position={'center'} pl={'10'} >
+            <Image ml={'10'}
+              alt={'Google pay'}
+              // objectFit={'cover'}
+              width={'21'}
+              height={'38'}
+              src={
+                'https://images.urbanclap.com/image/upload/categories/category_v2/category_7f907eb0.png'
+              }
+            />
+            <Image
+              alt={'App store'}
+              // objectFit={'cover'}
+              width={'21'}
+              height={'38'}
+              src={
+                'https://images.urbanclap.com/image/upload/categories/category_v2/category_7f741d10.png'
+              }
+            />
+          </Flex>
           <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
             {/* <input type="text" placeholder='select Country' /> */}
             {/* <Button
@@ -76,16 +76,16 @@ export default function Homemid() {
           </Stack>
         </Stack>
       </Flex>
-      <Flex flex={3} gap={8} maxH={'500'}> 
+      <Flex flex={3} gap={6} maxH={'500'}>
         <Image
-          alt={'Login Image'}
+          alt={'Image'}
           // objectFit={'cover'}
           src={
             'https://res.cloudinary.com/urbanclap/image/upload/w_300,f_auto/categories/category_v2/category_2d7045d0.png'
           }
         />
-         <Image
-          alt={'Login Image'}
+        <Image
+          alt={'Image'}
           // objectFit={'cover'}
           src={
             'https://res.cloudinary.com/urbanclap/image/upload/w_350,f_auto/categories/category_v2/category_2d013050.png'

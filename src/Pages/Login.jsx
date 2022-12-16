@@ -99,10 +99,10 @@ export default function Login() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Create your account</DrawerHeader>
+          <DrawerHeader>Enter Mobile no. to login</DrawerHeader>
 
           <DrawerBody>
-            <Input placeholder='Type here...' />
+            <input placeholder='Type Mobile number...' isRequired/>
           </DrawerBody>
 
           <DrawerFooter>
