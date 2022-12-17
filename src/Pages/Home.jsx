@@ -20,7 +20,6 @@ export default function SplitScreen() {
   const navigate = useNavigate
   const handleChangeCountry = (e) => {
     <RouterLink to={"/delhi"}></RouterLink> 
-
   }
   return (
     <div>

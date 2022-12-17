@@ -35,9 +35,10 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Center, FormControl, HStack,
+  useToast ,
 } from '@chakra-ui/react'
 // import { useDisclosure, Button,Input } from '@chakra-ui/react'
-
+import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
 import { PinInput, PinInputField } from '@chakra-ui/react';
 import { Navigate } from "react-router-dom";
 import Delhi from '../Pages/Delhi'
@@ -49,6 +50,7 @@ export default function WithSubnavigation() {
   const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
+  const toast = useToast()
 
   return (
     <div>
@@ -90,9 +92,12 @@ export default function WithSubnavigation() {
             direction={'row'}
             spacing={6}>
             {/* colorMode theme Toggle  */}
-            <Button onClick={toggleColorMode}>
+            {/* <Button onClick={toggleColorMode}>
               Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
-            </Button>
+            </Button> */}
+
+
+
             <Button
               as={'a'}
               fontSize={'m'}
@@ -121,6 +126,18 @@ export default function WithSubnavigation() {
             >
               Login/Sign Up
             </Button>
+
+            <Flex justifyContent="center" alignItems="center">
+      <Button
+        aria-label="Toggle Color Mode"
+        onClick={toggleColorMode}
+        _focus={{ boxShadow: 'none' }}
+        w="fit-content"
+        // {...props}
+        >
+        {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
+      </Button>
+    </Flex>
           </Stack>
         </Flex>
 
@@ -167,7 +184,17 @@ export default function WithSubnavigation() {
             <Button variant='outline' mr={3} onClick={onClose}>
               Cancel
             </Button>
-            <RouterLink to={"/delhi"}><Button colorScheme='blue'>Continue</Button></RouterLink>
+            <RouterLink to={"/delhi"}><Button colorScheme='blue'
+            onClick={() =>
+              toast({
+                title: 'Account created.',
+                description: "Congratulations!! Successfully logged In",
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+              })
+            }
+            >Continue</Button></RouterLink>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

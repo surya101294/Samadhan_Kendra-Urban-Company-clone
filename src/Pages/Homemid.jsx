@@ -76,7 +76,7 @@ export default function Homemid() {
           </Stack>
         </Stack>
       </Flex>
-      <Flex flex={3} gap={6} maxH={'500'}>
+      <Flex flex={2} gap={6} maxH={'500'}>
         <Image
           alt={'Image'}
           // objectFit={'cover'}
@@ -84,13 +84,13 @@ export default function Homemid() {
             'https://res.cloudinary.com/urbanclap/image/upload/w_300,f_auto/categories/category_v2/category_2d7045d0.png'
           }
         />
-        <Image
+        {/* <Image
           alt={'Image'}
           // objectFit={'cover'}
           src={
             'https://res.cloudinary.com/urbanclap/image/upload/w_350,f_auto/categories/category_v2/category_2d013050.png'
           }
-        />
+        /> */}
       </Flex>
     </Stack>
   );
