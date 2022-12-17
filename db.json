@@ -1,5 +1,5 @@
 { "data" : [
-  {
+  { "id":1,
     " title": "Express Trim",
     " 3": 4.83,
     " 4": "(9.1K)",
@@ -11,7 +11,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1650711648402-3502ab.jpeg",
     " 10": "Add"
   },
-  {
+  {"id":2,
     " title": "Style & Trim",
     " 3": 4.88,
     " 4": "(566)",
@@ -23,7 +23,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1661263276947-6f12ec.png",
     " 10": "Add"
   },
-  {
+  { "id":3,
     " title": "Trim & Hair Spa",
     " 3": 4.9,
     " 4": "(348)",
@@ -35,7 +35,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1664438144737-d56813.jpeg",
     " 10": "Add"
   },
-  {
+  { "id":4,
     " title": "Mom & Daughter Trim Pack",
     " 3": 4.8,
     " 4": "(160)",
@@ -47,7 +47,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1637643281048-3b4e78.png",
     " 10": "Add"
   },
-  {
+  { "id":5,
     " title": "Haircut",
     " 3": 4.81,
     " 4": "(6.7K)",
@@ -59,7 +59,7 @@
     "image": "",
     " 10": "View details"
   },
-  {
+  { "id":6,
     " title": "Haircut & styling",
     " 3": 4.81,
     " 4": "(100.4K)",
@@ -71,7 +71,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/supply/partner-app-supply/1668493426746-ada9b2.jpeg",
     " 10": "Add"
   },
-  {
+  { "id":7,
     " title": "Haircut  & Hair Spa",
     " 3": 4.86,
     " 4": "(613)",
@@ -83,7 +83,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/supply/partner-app-supply/1663151676773-f5f803.jpeg",
     " 10": "Add"
   },
-  {
+  { "id":8,
     " title": "Girl's Haircut",
     " 3": 4.82,
     " 4": "(4.9K)",
@@ -95,8 +95,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1644151475715-26a85e.jpeg",
     " 10": "Add"
   },
-  {
-    "": "FOR 6-15 YEAR GIRLS",
+  { "id":9,
     " title": "Mom and Daughter Pack",
     " 3": 4.81,
     " 4": "(5.6K)",
@@ -108,7 +107,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1637643281048-3b4e78.png",
     " 10": "Add"
   },
-  {
+  { "id":10,
     " title": "Blowdry: Straight & Smooth",
     " 3": 4.84,
     " 4": "(8.6K)",
@@ -120,7 +119,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_600,dpr_2,fl_progressive:steep,q_auto,c_limit/images/supply/partner-app-supply/1668503062279-01ca1a.jpeg",
     " 10": "View details"
   },
-  {
+  { "id":11,
     " title": "Blowdry: In Curl / Out Curl",
     " 3": 4.74,
     " 4": "(9.3K)",
@@ -132,8 +131,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1650710728185-13cb5e.jpeg",
     " 10": "Add"
   },
-  {
-    "": "",
+  { "id":12,
     " title": "Straightening",
     " 3": 4.89,
     " 4": "(10.7K)",
@@ -145,8 +143,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1650712577621-7ce491.jpeg",
     " 10": "Add"
   },
-  {
-    "": "",
+  { "id":13,
     " title": "Curls & Waves",
     " 3": 4.72,
     " 4": "(9.2K)",
@@ -159,7 +156,7 @@
     " 10": "Add"
   },
   {
-    "": "",
+    "id":14,
     " title": "Wedding Ready Group Styling Package",
     " 3": 4.65,
     " 4": "(211)",
@@ -172,7 +169,7 @@
     " 10": "Add"
   },
   {
-    "": "Add",
+    "id":15,
     " title": "L'Oreal Nourishing Hair Spa",
     " 3": 4.82,
     " 4": "(5.4K)",
@@ -184,8 +181,7 @@
     "image": "",
     " 10": "View details"
   },
-  {
-    "": "EXCLUDES STYLING",
+  {  "id":16,
     " title": "Haircut  & Hair Spa",
     " 3": 4.86,
     " 4": "(613)",
@@ -197,8 +193,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/supply/partner-app-supply/1663151676773-f5f803.jpeg",
     " 10": "Add"
   },
-  {
-    "": "",
+  { "id":17,
     " title": "Loreal Hair Spa with Styling",
     " 3": 4.79,
     " 4": "(57)",
@@ -210,8 +205,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/supply/partner-app-supply/1663151676773-f5f803.jpeg",
     " 10": "Add"
   },
-  {
-    "": "",
+  { "id":18,
     "title": "Relaxing Head Oil Massage",
     " 3": 4.79,
     " 4": "(7.1K)",
@@ -223,8 +217,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1639397192787-73f069.png",
     " 10": "Add"
   },
-  {
-    "": "COLOR TO BE PROVIDED",
+  { "id":19,
     " title": "Roots: Only Application",
     " 3": 4.78,
     " 4": "(11.2K)",
@@ -236,8 +229,7 @@
     "image": "",
     " 10": "View details"
   },
-  {
-    "": "STYLIST CARRIES COLOR",
+  { "id":20,
     " title": "Roots: Color & Application",
     " 3": 4.79,
     " 4": "(5.9K)",
@@ -249,8 +241,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1639397627725-b8ee0b.png",
     " 10": "Add"
   },
-  {
-    "": "COLOR TO BE PROVIDED",
+  { "id":21,
     " title": "Full Coverage: Only Application",
     " 3": 4.83,
     " 4": "(157)",
@@ -262,8 +253,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1666701146221-fd66e8.jpeg",
     " 10": "Add"
   },
-  {
-    "": "BLOWDRY NOT INCLUDED",
+  { "id":22,
     "title": "Loreal Full Coverage ( Color & Application )",
     " 3": 4.74,
     " 4": "(167)",
@@ -275,8 +265,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1665389609274-cf3ad9.jpeg",
     " 10": "Add"
   },
-  {
-    "": "INCLUDES HAIR MASQUE",
+  { "id":23,
     " title": "L' Oréal Global Fashion Color - Signature reflects",
     " 3": 4.71,
     " 4": "(916)",
@@ -288,8 +277,7 @@
     "image": "",
     " 10": "View details"
   },
-  {
-    "": "OFFER : FREE STYLING",
+  { "id":24,
     " title": "Loreal Signature 10 highlights",
     " 3": 4.74,
     " 4": "(532)",
@@ -301,8 +289,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1639398010862-53633e.png",
     " 10": "Add"
   },
-  {
-    "": "OFFER : FREE STYLING",
+  { "id":25,
     "title": "Balayage/Ombre",
     " 3": 4.59,
     " 4": "(338)",
@@ -314,8 +301,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1661470814410-c173e7.jpeg",
     " 10": "Add"
   },
-  {
-    "": "",
+  { "id":26,
     " title": "Style & Trim",
     " 3": 4.88,
     " 4": "(566)",
@@ -327,8 +313,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1661263276947-6f12ec.png",
     " 10": "Add"
   },
-  {
-    "": "EXCLUDES STYLING",
+  { "id":27,
     " title": "Trim & Hair Spa",
     " 3": 4.9,
     " 4": "(348)",
@@ -340,8 +325,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1664438144737-d56813.jpeg",
     " 10": "Add"
   },
-  {
-    "": "EXCLUDES STYLING",
+  { "id":28,
     " title": "Haircut  & Hair Spa",
     " 3": 4.86,
     " 4": "(613)",
@@ -353,8 +337,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/supply/partner-app-supply/1663151676773-f5f803.jpeg",
     " 10": "Add"
   },
-  {
-    "": "LONG LASTING RESULTS",
+  { "id":29,
     " title": "Kerafusion Keratin",
     " 3": 4.75,
     " 4": "(1.7K)",
@@ -366,8 +349,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1637322457137-c81f92.png",
     " 10": "Add"
   },
-  {
-    "": "NEWLY LAUNCHED",
+  { "id":30,
     " title": "Hair Botox",
     " 3": 4.62,
     " 4": "(270)",
@@ -379,8 +361,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1664539635094-663bac.jpeg",
     " 10": "Add"
   },
-  {
-    "": "",
+  { "id":31,
     " title": "Straightening",
     " 3": 4.89,
     " 4": "(10.7K)",
@@ -392,8 +373,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1650712577621-7ce491.jpeg",
     " 10": "Add"
   },
-  {
-    "": "STYLIST CARRIES COLOR",
+  { "id":32,
     " title": "Roots: Color & Application",
     " 3": 4.79,
     " 4": "(5.9K)",
@@ -405,7 +385,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1639397627725-b8ee0b.png",
     " 10": "Add"
   },
-  {
+  {"id":33,
     " title": "Blowdry: In Curl / Out Curl",
     " 3": 4.74,
     " 4": "(9.3K)",
@@ -417,7 +397,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1650710728185-13cb5e.jpeg",
     " 10": "Add"
   },
-  {
+  {"id":34,
     " title": "Curls & Waves",
     " 3": 4.72,
     " 4": "(9.2K)",
@@ -429,8 +409,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1650712585125-72cb41.jpeg",
     " 10": "Add"
   },
-  {
-    "": "COLOR TO BE PROVIDED",
+  { "id":35,
     " title": "Roots: Only Application",
     " 3": 4.78,
     " 4": "(11.2K)",
@@ -442,8 +421,7 @@
     "image": "",
     " 10": "View details"
   },
-  {
-    "": "Add",
+  { "id":36,
     " title": "Blowdry: Straight & Smooth",
     " 3": 4.84,
     " 4": "(8.6K)",
@@ -455,8 +433,7 @@
     "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_600,dpr_2,fl_progressive:steep,q_auto,c_limit/images/supply/partner-app-supply/1668503062279-01ca1a.jpeg",
     " 10": "View details"
   },
-  {
-    "": "EXCLUDES STYLING",
+  {  "id":37,
     " title": "Express Trim",
     " 3": 4.83,
     " 4": "(9.1K)",
