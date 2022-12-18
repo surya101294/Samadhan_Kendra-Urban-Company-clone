@@ -1,195 +1,171 @@
-// import {
-//   Box,
-//   chakra,
-//   Container,
-//   Stack,
-//   Text,
-//   Image,
-//   Flex,
-//   VStack,
-//   Button,
-//   Heading,
-//   SimpleGrid,
-//   StackDivider,
-//   useColorModeValue,
-//   VisuallyHidden,
-//   List,
-//   ListItem,
-// } from '@chakra-ui/react';
-// import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
-// import { MdLocalShipping } from 'react-icons/md';
-// import {useState, useEffect} from 'react'
-// import { useParams } from 'react-router-dom';
+import React from 'react'
+import {
+  Flex,
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+  InputGroup,
+  HStack,
+  InputRightElement,
+  Stack,
+  Button,
+  Heading,
+  Text,
+  useColorModeValue,
+  Link,
+} from '@chakra-ui/react';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  useToast,
+} from '@chakra-ui/react'
+import { useState } from 'react';
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { Link as RouterLink } from 'react-router-dom';
+const initstate={
+  fname:"",
+  lname:"",
+  email:"",
+  number:"",
+  password:"",
+}
 
-// export default function Payment() {
-//   const {id}=useParams()
-//     console.log(id)
-//     const [data, setData] = useState('')
-//      useEffect(()=>{ 
-//         fetch (`http://localhost:3000/data/${id}`)
-//         .then((res) => res.json())
-//         .then((res) => setData(res))
-//         .catch((err) => console.log(err))
-//     },[])  
-//     console.log(data)
-//   return (
-//     <Container maxW={'7xl'}>
-//       <SimpleGrid
-//         columns={{ base: 1, lg: 2 }}
-//         spacing={{ base: 8, md: 10 }}
-//         py={{ base: 18, md: 24 }}>
-//         <Flex>
-//           <Image
-//             rounded={'md'}
-//             alt={'product image'}
-//             src={data.image}
-//             fit={'cover'}
-//             align={'center'}
-//             w={'100%'}
-//             h={{ base: '100%', sm: '400px', lg: '500px' }}
-//           />
-//         </Flex>
-//         <Stack spacing={{ base: 6, md: 10 }}>
-//           <Box as={'header'}>
-//             <Heading
-//               lineHeight={1.1}
-//               fontWeight={600}
-//               fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
-//               {data.title}
-//             </Heading>
-//             <Text
-//               color={useColorModeValue('gray.900', 'gray.400')}
-//               fontWeight={300}
-//               fontSize={'2xl'}>
-//               Rs. : {data.price}
-//             </Text>
-//           </Box>
+let cartArray = JSON.parse(localStorage.getItem('addCart'))
+const Payment = () => {
+  const [formState, setFormState] = useState(initstate);
+  const [showPassword, setShowPassword] = useState(false);
+  const toast = useToast()
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const handleFormData=(e)=>{
+    
+    setFormState({ ...formState, [e.target.name]: e.target.value })
+  }
+  const handleFormsubmit=(e)=>{
+    e.preventDefault()
+    console.log("clicked")
+  }
+  const handleCartNull=()=>{
+    localStorage.removeItem("addCart")
+    toast({
+      title: 'Payment Done',
+      description: "Thankyou for shopping with us.",
+      status: 'success',
+      duration: 9000,
+      isClosable: true,
+    })
+  } 
+  const {fname, lname, email, number, password} = formState
+  return (
+    <div>
+    <Flex
+      minH={'100vh'}
+      align={'center'}
+      justify={'center'}
+      bg={useColorModeValue('gray.50', 'gray.800')}>
+      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+        <Stack align={'center'}>
+          <Heading fontSize={'4xl'} textAlign={'center'}>
+            Enter Credit Card details
+          </Heading>
+          <Text fontSize={'lg'} color={'gray.600'}>
+            
+          </Text>
+        </Stack>
+        <Box
+          rounded={'lg'}
+          bg={useColorModeValue('white', 'gray.700')}
+          boxShadow={'lg'}
+          p={8}>
+          <Stack spacing={4}>
+            <HStack>
+              <Box>
+                <FormControl id="firstName" isRequired onSubmit={handleFormsubmit} >
+                  <FormLabel>First Name</FormLabel>
+                  <Input type="text" name={fname} onChange={handleFormData} />
+                </FormControl>
+              </Box>
+              <Box>
+                <FormControl id="lastName"onSubmit={handleFormsubmit} >
+                  <FormLabel>Last Name</FormLabel>
+                  <Input type="text" name={lname}  onChange={handleFormData} />
+                </FormControl>
+              </Box>
+            </HStack>
+            <FormControl id="email" isRequired onSubmit={handleFormsubmit}>
+              <FormLabel>Address</FormLabel>
+              <Input type="email" name={email}  onChange={handleFormData}/>
+            </FormControl>
+            <FormControl id="number" isRequired onSubmit={handleFormsubmit}>
+              <FormLabel>Credit Card Number</FormLabel>
+              <Input type="number" name={number} onChange={handleFormData}/>
+            </FormControl>
+            <FormControl id="password" isRequired onSubmit={handleFormsubmit}>
+              <FormLabel>CVV</FormLabel>
+              <InputGroup>
+                <Input type={showPassword ? 'text' : 'password'} name={password} onChange={handleFormData}/>
+                <InputRightElement h={'full'}>
+                  <Button
+                    variant={'ghost'}
+                    onClick={() =>
+                      setShowPassword((showPassword) => !showPassword)
+                    }>
+                    {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                  </Button>
+                </InputRightElement>
+              </InputGroup>
+            </FormControl>
+            <Stack spacing={10} pt={2}>
+              <Button
+                loadingText="Submitting"
+                size="lg"
+                bg={'blue.400'}
+                color={'white'}
+                _hover={{
+                  bg: 'blue.500', 
+                }} onClick={onOpen} >
+               Proceed
+              </Button>
+            </Stack>
+            {/* <Stack pt={6}>
+              <Text align={'center'}>
+                Already a user? <Link color={'blue.400'}>Login</Link>
+              </Text>
+            </Stack> */}
+          </Stack>
+        </Box>
+      </Stack>
+    </Flex>
 
-//           <Stack
-//             spacing={{ base: 4, sm: 6 }}
-//             direction={'column'}
-//             divider={
-//               <StackDivider
-//                 borderColor={useColorModeValue('gray.200', 'gray.600')}
-//               />
-//             }>
-//             <VStack spacing={{ base: 4, sm: 6 }}>
-//               <Text
-//                 color={useColorModeValue('gray.500', 'gray.400')}
-//                 fontSize={'2xl'}
-//                 fontWeight={'300'}>
-//                   {data.description}
-//               </Text>
-//               {/* <Text fontSize={'lg'}>
-//                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-//                 aliquid amet at delectus doloribus dolorum expedita hic, ipsum
-//                 maxime modi nam officiis porro, quae, quisquam quos
-//                 reprehenderit velit? Natus, totam.
-//               </Text> */}
-//             </VStack>
-//             <Box>
-//               {/* <Text
-//                 fontSize={{ base: '16px', lg: '18px' }}
-//                 color={useColorModeValue('yellow.500', 'yellow.300')}
-//                 fontWeight={'500'}
-//                 textTransform={'uppercase'}
-//                 mb={'4'}>
-//                 Features
-//               </Text> */}
+    <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Please confirm to Continue</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            {/* <Lorem count={2} /> */}
+          </ModalBody>
 
-//               {/* <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-//                 <List spacing={2}>
-//                   <ListItem>Chronograph</ListItem>
-//                   <ListItem>Master Chronometer Certified</ListItem>{' '}
-//                   <ListItem>Tachymeter</ListItem>
-//                 </List>
-//                 <List spacing={2}>
-//                   <ListItem>Anti‑magnetic</ListItem>
-//                   <ListItem>Chronometer</ListItem>
-//                   <ListItem>Small seconds</ListItem>
-//                 </List>
-//               </SimpleGrid> */}
-//             </Box>
-//             <Box>
-//               <Text
-//                 fontSize={{ base: '16px', lg: '18px' }}
-//                 color={useColorModeValue('yellow.500', 'yellow.300')}
-//                 fontWeight={'500'}
-//                 textTransform={'uppercase'}
-//                 mb={'4'}>
-//                   {data.description}
-//               </Text>
+          <ModalFooter>
+            <RouterLink to={'/addToCard'}><Button colorScheme='blue' mr={3} onClick={onClose}>
+              Close
+            </Button>
+            </RouterLink>
+            <RouterLink to={'/'}>
+            <Button variant='ghost' onClick={handleCartNull}
+              
+              >Confirm</Button></RouterLink>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </div>
+  )
+}
 
-//               {/* <List spacing={2}>
-//                 <ListItem>
-//                   <Text as={'span'} fontWeight={'bold'}>
-//                     Between lugs:
-//                   </Text>{' '}
-//                   20 mm
-//                 </ListItem>
-//                 <ListItem>
-//                   <Text as={'span'} fontWeight={'bold'}>
-//                     Bracelet:
-//                   </Text>{' '}
-//                   leather strap
-//                 </ListItem>
-//                 <ListItem>
-//                   <Text as={'span'} fontWeight={'bold'}>
-//                     Case:
-//                   </Text>{' '}
-//                   Steel
-//                 </ListItem>
-//                 <ListItem>
-//                   <Text as={'span'} fontWeight={'bold'}>
-//                     Case diameter:
-//                   </Text>{' '}
-//                   42 mm
-//                 </ListItem>
-//                 <ListItem>
-//                   <Text as={'span'} fontWeight={'bold'}>
-//                     Dial color:
-//                   </Text>{' '}
-//                   Black
-//                 </ListItem>
-//                 <ListItem>
-//                   <Text as={'span'} fontWeight={'bold'}>
-//                     Crystal:
-//                   </Text>{' '}
-//                   Domed, scratch‑resistant sapphire crystal with anti‑reflective
-//                   treatment inside
-//                 </ListItem>
-//                 <ListItem>
-//                   <Text as={'span'} fontWeight={'bold'}>
-//                     Water resistance:
-//                   </Text>{' '}
-//                   5 bar (50 metres / 167 feet){' '}
-//                 </ListItem>
-//               </List> */}
-//             </Box>
-//           </Stack>
-
-//           <Button
-//             rounded={'none'}
-//             w={'full'}
-//             mt={8}
-//             size={'lg'}
-//             py={'7'}
-//             bg={useColorModeValue('gray.900', 'gray.50')}
-//             color={useColorModeValue('white', 'gray.900')}
-//             textTransform={'uppercase'}
-//             _hover={{
-//               transform: 'translateY(2px)',
-//               boxShadow: 'lg',
-//             }}>
-//             Add to cart
-//           </Button>
-
-//           <Stack direction="row" alignItems="center" justifyContent={'center'}>
-//             <MdLocalShipping />
-//             <Text>2-3 business days delivery</Text>
-//           </Stack>
-//         </Stack>
-//       </SimpleGrid>
-//     </Container>
-//   );
-// }
+export default Payment

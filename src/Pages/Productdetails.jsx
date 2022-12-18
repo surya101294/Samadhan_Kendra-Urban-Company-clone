@@ -21,7 +21,7 @@ export default function Productdetails() {
      useEffect(()=>{ 
         fetch (`http://localhost:3000/data/${id}`)
         .then((res) => res.json())
-        .then((res) =>   setData(res))
+        .then((res) =>  setData(res))
         .catch((err) => console.log(err))
     },[])  
     console.log(data)
@@ -59,9 +59,9 @@ export default function Productdetails() {
               {data.title}
             </Text>
           </Box>
-          <Heading color={'black'} fontSize={'2xl'} noOfLines={1}>
+          {/* <Heading color={'black'} fontSize={'2xl'} noOfLines={1}>
             React v18.0
-          </Heading>
+          </Heading> */}
           <Text color={'gray.500'} noOfLines={2}>
             {data.description}
           </Text>

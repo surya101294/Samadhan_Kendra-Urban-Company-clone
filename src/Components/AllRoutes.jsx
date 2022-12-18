@@ -4,10 +4,10 @@ import Home from '../Pages/Home'
 import Login from '../Pages/Login'
 import Delhi from '../Pages/Delhi'
 import HairSkin from '../Pages/HairSkin'
-import Payment from '../Pages/Payment'
+// import Payment from '../Pages/Payment'
 import AddtoCartpage from '../Pages/AddtoCartpage'
 import Productdetails from '../Pages/Productdetails'
-import PaymentPage from '../Pages/paymentPage'
+import Payment from '../Pages/Payment'
 
 const AllRoutes = () => {
   return (
@@ -18,8 +18,9 @@ const AllRoutes = () => {
         <Route path="/delhi" element={<Delhi />} />
         <Route path="/hair-skin" element={<HairSkin />} />
         <Route path="/payment" element={<Payment />} />
-        <Route path="/payment/:id" element={<Payment />} />
-        <Route path="/paymentPage/:id" element={<PaymentPage />} />
+        {/* <Route path="/payment/:id" element={<Payment />} /> */}
+        <Route path="/product/:id" element={<Productdetails />} />
+        <Route path="/addToCard" element={<AddtoCartpage />} />
         <Route path="*" element={<h1>Error 404 , No page Found</h1>} />
         {/* <Route path="/" element={<Home/>}></Route> */}
       </Routes>

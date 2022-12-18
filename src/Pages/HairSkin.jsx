@@ -11,34 +11,22 @@ import {
   Image,
   Divider,
   Button,
-  ButtonGroup,
-  SimpleGrid,
-  Grid,
+  useDisclosure,
+  Grid
 } from '@chakra-ui/react';
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure
-} from '@chakra-ui/react'
-import { RepeatClockIcon } from '@chakra-ui/icons';
-import { Link } from 'react-router-dom';
+
+import { Link, Navigate } from 'react-router-dom';
 import Productdetails from './Productdetails';
 
-
-// let cartArray = JSON.parse(localStorage.getItem('addCart')) || [] 
+let cartArray = JSON.parse(localStorage.getItem('addCart'))|| [] 
+let priceArr= (localStorage.getItem('itemPrice')) || 0
 const HairSkin = () => {
   const [data, setData] = useState([])
   const [state,setState]= useState('asc')
   const [search,setSearch]= useState('')
-  const [cartData,setCartData]= useState({})
-  const [cart,setCart]= useState([])
+  // const [cartData,setCartData]= useState({})
+  // const [cart,setCart]= useState([])
   const { isOpen, onOpen, onClose } = useDisclosure()
-
   
   const handle=()=>{
     fetch(`http://localhost:3000/data?_sort=price&_order=${state}&q=${search}`)
@@ -49,19 +37,24 @@ const HairSkin = () => {
     })
     .catch((err) => console.log(err))
   }
- 
   useEffect(() => {
     handle()
   }, [])
   console.log(data)
 
-  const handleAddCart=(el)=>{
-    setCartData(el)
-    setCart(setCart.push(cartData))
-    // cartArray.push(cartData)
-    localStorage.setItem('addCart', JSON.stringify(cart))
+  const handleAddCart=(data)=>{
+    console.log(data)
+    // setCartData(data)
+    // setCart(setCart(cartData))
+    // cartArray.push(cartData)6
+    cartArray.push(data)
+    console.log(cartArray)
+    localStorage.setItem('addCart', JSON.stringify(cartArray)) 
+    // localStorage.setItem('itemPrice', priceArr)
+    // console.log("price",priceArr)
+    // <Navigate to={`/paymentPage/${el.id}`} />
   }
-  console.log("cartData",cart)
+  console.log("cartData",cartArray)
   return (
     <div>
       <div>
@@ -69,6 +62,7 @@ const HairSkin = () => {
         <Button onClick={()=>handle(setState('desc'))}>High to Low</Button>
         <input type="text" placeholder='search' value={search} onChange={(e)=>setSearch(e.target.value)} />
         <Button onClick={handle}>Search</Button>
+        <Link to="/addToCard"><Button >Move to Cart </Button></Link>  
       </div>
       <Heading></Heading>
       <Grid templateColumns='repeat(auto-fill, minmax(300px, 1fr))' spacing={2} >
@@ -82,15 +76,16 @@ const HairSkin = () => {
                 borderRadius='lg'
               />
               <Stack mt='6' spacing='3'>
-                <Heading size='md'>{el.description}</Heading>
-                <Text>
-                  {el.title}
+                <Heading size='md'> {el.title}</Heading>
+                <Text noOfLines={1}>
+                 {el.description}
                 </Text>
                 <Text color='blue.600' fontSize='2xl'>
                   Rs. {el.price}
                 </Text>
               </Stack>
             </CardBody>
+
             <Divider />
             <CardFooter>
               {/* <ButtonGroup spacing='2'>
@@ -100,33 +95,14 @@ const HairSkin = () => {
                 
               {/* <Link to={`/paymentPage/${el.id}`} > */}
                   <Button variant='ghost' colorScheme='blue' onClick={()=>handleAddCart(el)} >
-                  Procced with the Payment 
+                  {/* Procced with the Payment */}
+                  Add to Cart 
                 </Button>
                 {/* </Link> */}
               {/* </ButtonGroup> */}
             </CardFooter>
          </Card>
-          <Modal
-        isCentered
-        onClose={onClose}
-        isOpen={isOpen}
-        motionPreset='slideInBottom'
-      >
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>{el.title}</ModalHeader>
-          <ModalCloseButton />
-          {/* <ModalBody> */}
-            {/* <Lorem count={2} /> */}
-          {/* </ModalBody> */}
-          <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant='ghost'>Secondary Action</Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+          
           </div>
         )
         )}
