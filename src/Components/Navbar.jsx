@@ -35,14 +35,14 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Center, FormControl, HStack,
-  useToast ,
+  useToast,
 } from '@chakra-ui/react'
 // import { useDisclosure, Button,Input } from '@chakra-ui/react'
 import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
 import { PinInput, PinInputField } from '@chakra-ui/react';
 import { Navigate } from "react-router-dom";
 import Delhi from '../Pages/Delhi'
-import {Link as RouterLink} from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
 // import Home from '../Pages/Home'
 
 export default function WithSubnavigation() {
@@ -79,8 +79,8 @@ export default function WithSubnavigation() {
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <RouterLink to={"/"}>
-            <img height={'30px'} width={'120px'} src={logo} alt="logo"  />
+            <RouterLink to={"/"}>
+              <img height={'30px'} width={'120px'} src={logo} alt="logo" />
             </RouterLink>
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             </Flex>
@@ -95,9 +95,6 @@ export default function WithSubnavigation() {
             {/* <Button onClick={toggleColorMode}>
               Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
             </Button> */}
-
-
-
             <Button
               as={'a'}
               fontSize={'m'}
@@ -128,16 +125,16 @@ export default function WithSubnavigation() {
             </Button>
 
             <Flex justifyContent="center" alignItems="center">
-      <Button
-        aria-label="Toggle Color Mode"
-        onClick={toggleColorMode}
-        _focus={{ boxShadow: 'none' }}
-        w="fit-content"
-        // {...props}
-        >
-        {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
-      </Button>
-    </Flex>
+              <Button
+                aria-label="Toggle Color Mode"
+                onClick={toggleColorMode}
+                _focus={{ boxShadow: 'none' }}
+                w="fit-content"
+              // {...props}
+              >
+                {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
+              </Button>
+            </Flex>
           </Stack>
         </Flex>
 
@@ -185,15 +182,15 @@ export default function WithSubnavigation() {
               Cancel
             </Button>
             <RouterLink to={"/delhi"}><Button colorScheme='blue'
-            onClick={() =>
-              toast({
-                title: 'Account created.',
-                description: "Congratulations!! Successfully logged In",
-                status: 'success',
-                duration: 9000,
-                isClosable: true,
-              })
-            }
+              onClick={() =>
+                toast({
+                  title: 'Account created.',
+                  description: "Congratulations!! Successfully logged In",
+                  status: 'success',
+                  duration: 9000,
+                  isClosable: true,
+                })
+              }
             >Continue</Button></RouterLink>
           </DrawerFooter>
         </DrawerContent>

@@ -19,14 +19,15 @@ import { Link as RouterLink, useNavigate } from 'react-router-dom';
 export default function SplitScreen() {
   const navigate = useNavigate
   const handleChangeCountry = (e) => {
-    <RouterLink to={"/delhi"}></RouterLink> 
+    <RouterLink to={"/delhi"}></RouterLink>
   }
+
   return (
     <div>
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
         <Flex flex={1}>
           <Image
-          
+
             alt={'Login Image'}
             objectFit={'cover'}
             src={
@@ -57,7 +58,7 @@ export default function SplitScreen() {
                   zIndex: -1,
 
                 }} color={'white'}>
-                Quality home services, on demand
+                Quality home services, on Demand
               </Text>
               <br />{' '}
               <Text color={'white'} as={'span'}>
@@ -72,16 +73,16 @@ export default function SplitScreen() {
             </Text> */}
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4} position={'center'}>
               {/* <input type="text" position={'center'} placeholder='select your City' /> */}
-             <RouterLink to={"/delhi"}> 
+              {/* <RouterLink to={"/delhi"}>  */}
 
               <Select position={'center'} placeholder='Select Country' bg={'white'} variant='filled'
-                >
-                "
+                onChange={handleChangeCountry}>
+
                 <option value='option1'>India</option>
                 <option value='option2'>New York</option>
                 <option value='option3'>America</option>
               </Select>
-              </RouterLink>
+              {/* </RouterLink> */}
               {/* <Button
                 rounded={'full'}
                 bg={'blue.400'}
@@ -98,8 +99,8 @@ export default function SplitScreen() {
 
       </Stack>
 
-      <Stack  direction={{ base: 'column', md: 'row' }}>
-        <Flex p={10 } flex={1} align={'center'} justify={'center'}>
+      <Stack direction={{ base: 'column', md: 'row' }}>
+        <Flex p={10} flex={1} align={'center'} justify={'center'}>
           <Stack spacing={6} w={'full'} maxW={'lg'}>
             <Heading fontSize={{ base: '3xl', md: '4xl', lg: '4xl' }}>
               <Text
